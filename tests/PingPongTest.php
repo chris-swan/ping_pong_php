@@ -22,13 +22,27 @@
         {
             //arange
             $test_PingPongGenerator = new PingPongGenerator;
-            $input = 4;
+            $input = 2;
 
             //act
             $result = $test_PingPongGenerator->generatePingPongArray($input);
 
             //assert
-            $this->assertEquals(array(1,2,3,4), $result);
+            $this->assertEquals(array(1,2), $result);
+        }
+
+        //third test: user input is 3, result given is "ping"
+        function test_makePingPong_ThreeIsPing()
+        {
+            //arrange
+            $test_PingPongGenerator = new PingPongGenerator;
+            $input = 3;
+
+            //act
+            $result = $test_PingPongGenerator->generatePingPongArray($input);
+
+            //assert
+            $this->assertEquals(array(1,2,"Ping"), $result);
         }
     }
 

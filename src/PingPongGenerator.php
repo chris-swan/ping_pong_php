@@ -6,7 +6,12 @@
         	$result = array();
         	$counter = 1;
         	while ($counter <= $input) {
-        		$result[] = $counter;
+        		if ($counter == 3) {
+        			$result[] = "Ping";
+        		}
+        		else {
+        			$result[] = $counter;
+        		}
         		++$counter;
         	}
         	return $result;
